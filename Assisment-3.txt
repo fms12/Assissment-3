@@ -1,0 +1,53 @@
+
+
+// Second Question Solution
+
+import java.io.*;
+import java.util.*;
+
+class SecondQuestion {
+	public static void main (String[] args) {
+		HashMap<String,Object> globalMap = new HashMap<String,Object>();
+		ArrayList<Object> ValueList  = new ArrayList<Object>();
+	    	HashMap<String,String> firstInnerListMap  = new HashMap<String,String>();
+	    	HashMap<String,String> secondInnerListMap = new HashMap<String,String>();
+	   	HashMap<String,String> thirdInnerListMap  = new HashMap<String,String>();
+	    
+	   
+		
+        	//creating employess key and value as list in global map 
+		globalMap.put("employess",ValueList);
+		
+		
+        	//adding first map inside  the list 
+		ValueList.add(firstInnerListMap);
+
+        	//puting the values inside the first inner HashMap
+        	firstInnerListMap.put("id","1");
+        	firstInnerListMap.put("name","Admin");
+        	firstInnerListMap.put("location","India");
+        
+        	// adding second map inside the list
+		ValueList.add(secondInnerListMap);
+
+    		// putting the value inside the second Inner Map
+        	secondInnerListMap.put("id","2");
+        	secondInnerListMap.put("name","Author");
+        	secondInnerListMap.put("location","USA");
+
+
+    		// adding third map inside the list
+		ValueList.add(thirdInnerListMap);
+
+    		//putting the value inside the third inner map
+        	thirdInnerListMap.put("id","3");
+        	thirdInnerListMap.put("name","Visitor");
+        	thirdInnerListMap.put("location","USA");
+		
+		
+		System.out.println(globalMap);
+        
+		
+
+	}
+}
